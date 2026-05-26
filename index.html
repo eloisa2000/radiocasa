@@ -100,30 +100,5 @@
     </div>
   </div>
 
-  <!-- NOW PLAYING: muestra la canción actual en tiempo real.
-       Está desactivado. Para activarlo:
-       1. Quitar las líneas de comentario de abajo.
-       2. Agregar <div class="now-playing" id="np">Cargando...</div>
-          donde se quiera mostrar el texto (por ejemplo, debajo del reproductor). -->
-  <!--
-  <script>
-    async function fetchNowPlaying() {
-      try {
-        const res = await fetch('https://a8.asurahosting.com/api/nowplaying/radiocasa');
-        const data = await res.json();
-        const song = data.now_playing?.song;
-        if (song) {
-          document.getElementById('np').innerHTML =
-            'Sonando ahora: <strong>' + song.artist + ' — ' + song.title + '</strong>';
-        }
-      } catch (e) {
-        document.getElementById('np').textContent = '';
-      }
-    }
-    fetchNowPlaying();
-    setInterval(fetchNowPlaying, 15000);
-  </script>
-  -->
-
 </body>
 </html>
