@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radio Casa - Radiodifusión de música</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+
+  <div class="page">
+    <div class="main-grid">
+
+      <div class="col-left">
+        <div class="header">
+
+          <!-- LOGO: para cambiar el logo, reemplazar el archivo radio-casa.gif -->
+          <img class="logo-img" src="radio-casa.gif" alt="Radio Casa" />
+
+          <!-- EDITABLE: textos de presentación de la radio.
+               Cambiar el texto entre las etiquetas <p> -->
+          <div class="tagline">
+            <p class="tagline-main">Radiodifusión de música.</p>
+            <p class="tagline-sub">Distintos géneros, distintas épocas.</p>
+          </div>
+
+          <img class="divider-img" src="divisor-monitos.gif" alt="" />
+        </div>
+
+        <!-- TARJETAS DE TEXTO
+             Cada tarjeta tiene un título (dentro de <h2>) y un texto (dentro de <p>).
+             Para agregar una tarjeta nueva, copiar todo el bloque "card" y pegarlo abajo.
+             Para ocultar una tarjeta, comentarla con las flechas de HTML. -->
+        <div class="cards-scroll">
+
+          <!-- EDITABLE: tarjeta "Sobre Radio Casa" -->
+          <div class="card">
+            <div class="card-header">
+              <h2>SOBRE RADIO CASA</h2>
+            </div>
+            <div class="card-body">
+              <p>Música hecha desde casa, para escuchar desde cualquier lado. Distintos géneros, distintas épocas.</p>
+            </div>
+          </div>
+
+          <!-- Tarjetas ocultas. Para activarlas, eliminar las líneas de comentario. -->
+          <!--
+          <div class="card">
+            <div class="card-header">
+              <h2>TEXTO BIEN LARGO</h2>
+            </div>
+            <div class="card-body">
+              <p>Aquí se puede poner la historia de Radio Casa, un texto libre, lo que quieran contar.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h2>VIDEO</h2>
+            </div>
+            <div class="card-body" style="padding: 0;">
+              <iframe width="100%" height="280" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: block;"></iframe>
+            </div>
+          </div>
+          -->
+
+        </div>
+      </div>
+
+      <div class="col-right">
+
+        <img class="smiley-divider" src="divisor-smiley.gif" alt="" />
+
+        <!-- REPRODUCTOR DE RADIO: no tocar a menos que cambie la URL de AzuraCast -->
+        <div class="player-wrapper">
+          <iframe src="https://a8.asurahosting.com/public/radiocasa/embed?theme=dark&primary_color=ffff24&bg_color=2a2520&text_color=d1b48c&autoplay=1&volume=50" frameborder="0" allowtransparency="true" allow="autoplay"></iframe>
+        </div>
+
+        <!-- IMAGEN PRINCIPAL: para cambiarla, reemplazar welcome-to-radio-casa.png -->
+        <img class="welcome-img" src="welcome-to-radio-casa.png" alt="Welcome to Radio Casa" />
+
+        <!-- EDITABLE: footer con links.
+             El primer link es la URL del sitio.
+             El segundo es el correo para aportes. -->
+        <div class="footer">
+          <div class="footer-item">
+            <img class="footer-icon" src="icono-radio-casa.gif" alt="" />
+            <a href="https://radiocasa.cl" target="_blank">RADIOCASA.CL</a>
+          </div>
+          <div class="footer-item">
+            <img class="footer-icon" src="icono-aportes.gif" alt="" />
+            <span>APORTES:</span>
+            <a href="mailto:radiocasa@mail.com">RADIOCASA@MAIL.COM</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- NOW PLAYING: muestra la canción actual en tiempo real.
+       Está desactivado. Para activarlo:
+       1. Quitar las líneas de comentario de abajo.
+       2. Agregar <div class="now-playing" id="np">Cargando...</div>
+          donde se quiera mostrar el texto (por ejemplo, debajo del reproductor). -->
+  <!--
+  <script>
+    async function fetchNowPlaying() {
+      try {
+        const res = await fetch('https://a8.asurahosting.com/api/nowplaying/radiocasa');
+        const data = await res.json();
+        const song = data.now_playing?.song;
+        if (song) {
+          document.getElementById('np').innerHTML =
+            'Sonando ahora: <strong>' + song.artist + ' — ' + song.title + '</strong>';
+        }
+      } catch (e) {
+        document.getElementById('np').textContent = '';
+      }
+    }
+    fetchNowPlaying();
+    setInterval(fetchNowPlaying, 15000);
+  </script>
+  -->
+
+</body>
+</html>
