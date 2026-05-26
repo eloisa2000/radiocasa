@@ -292,6 +292,10 @@ body {
 
   .card-header h2 {
     font-size: 20px;
+
+  .player-wrapper iframe {
+    height: 90px;
+    }
   }
 }
 
