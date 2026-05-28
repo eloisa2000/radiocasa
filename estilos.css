@@ -16,7 +16,7 @@ body {
   font-family: 'Times New Roman', 'Georgia', serif;
   color: var(--text);
   background-color: #F0CE9E;
-  background-image: url("textura.jpg");
+  background-image: url("textura.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
