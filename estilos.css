@@ -22,7 +22,7 @@ body {
   background-repeat: no-repeat;
   background-blend-mode: multiply;
   height: 100dvh;
-  overflow: hidden;
+  overflow: auto;
   position: relative;
 }
 
@@ -33,7 +33,7 @@ body {
   margin: 0 auto;
   padding: 43px 60px 30px;
   height: 100dvh;
-  overflow: hidden;
+  overflow: auto;
   box-sizing: border-box;
 }
 
@@ -161,7 +161,7 @@ body {
 .player-wrapper iframe {
   display: block;
   width: 100%;
-  height: 130px;
+  height: 15dvh;
   border: 0;
 }
 
@@ -290,7 +290,7 @@ body {
     line-height: 20px;
   }
 
-.card-header h2 {
+  .card-header h2 {
     font-size: 20px;
   }
 
